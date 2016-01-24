@@ -15,6 +15,7 @@ nav {
 
 nav li {
 	display: inline-block;
+	transition: all .25s ease-in-out;
 }
 
 img {
@@ -88,6 +89,14 @@ nav a, nav a :visited {
   color:#000;
   text-decoration: none;
   font-family: 'Linden Hill' , sans-serif;
+  /* This (below) will make "all" changing properties "east-in-out" over "0.5s". You'll see!  */
+  /* 
+  	For example, because this is applied on the "nav a",
+  	if you change it's colour, size, height, background-colour, etc,
+  	the changes will "animate" smoothly, over .5s (or whatever you change it to).
+  	In this case, when you hover, the font-colour will change smoothly, instead of instantly. 
+  */
+  transition: all 0.5s ease-in-out;
 }
 
 nav a.selected, nav a:hover {
